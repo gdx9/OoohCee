@@ -12,7 +12,7 @@ using std::cout;// stream input operator
 using std::endl;// to new line
 
 // enter to the program
-int main(){
+/*int main(){
 
 	cout << "Hello, World" << endl;
 	cout << "First Name: \t" << "Roman" << endl;
@@ -23,6 +23,6 @@ int main(){
 	getchar();
 
 	return 0;
-}
+}*/
 
 

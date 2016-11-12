@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+#include <cstring>
 #include <ctime>// ищем в стандартных директориях для средства разработки
 #include "pi.h"// ищем в этой директории(короче, те, что мы написали сами)
 #define PI2 3.14// объявили константу. можно дальше использовать
@@ -38,33 +39,29 @@ Date addYear(Date d)
 
 
 int main(){
+/*
+	// cout << setfill('_');// fill ALL empty symbols as '_'(not space, just empty, like with setw())
+	// cout << "Name:   " << setw(20) << "Vasily" << endl;// setw(20) - set with of next line in 20 symbols. And right layout
+	// cout << "Surname:" << setw(20) << "Pugovkin" << endl;// endl - end of line
+	// cout << "Sex:    " << setw(20) << "male" << endl;
+	// cout << "Birth:  " << setw(20) << 1980 << endl;
 
-	/*
-	cout << setfill('_');// fill ALL empty symbols as '_'(not space, just empty, like with setw())
-	cout << "Name:   " << setw(20) << "Vasily" << endl;// setw(20) - set with of next line in 20 symbols. And right layout
-	cout << "Surname:" << setw(20) << "Pugovkin" << endl;// endl - end of line
-	cout << "Sex:    " << setw(20) << "male" << endl;
-	cout << "Birth:  " << setw(20) << 1980 << endl;
-	 */
-
-	/*
 	// 123: 24 105.20 B
-	int n;
-	int days;
-	double price;
-	char category;
-	char c;
+	// int n;
+	// int days;
+	// double price;
+	// char category;
+	// char c;
 
 	// >> - вводим, << - выводим
 	// cin >> noskipws;
-	cin >> n;// вводим символы в консоль. Первый до пробела - n
-	cin >> c;// второй до пробела - c
-	cin >> days;// третий - days и т.д.
-	cin >> price;
-	cin >> category;
+	// cin >> n;// вводим символы в консоль. Первый до пробела - n
+	// cin >> c;// второй до пробела - c
+	// cin >> days;// третий - days и т.д.
+	// cin >> price;
+	// cin >> category;
 
-	cout << n << ' ' << days << ' ' << price << ' ' << category << endl;// вывод переменных
-	*/
+	// cout << n << ' ' << days << ' ' << price << ' ' << category << endl;// вывод переменных
 
 	int a,b,c,d;
 
@@ -129,18 +126,13 @@ int main(){
 	////////////////////////////////
 
 	/// Побитовые операции
-	/*
-	Имеем число 5 - 00000101. Чтобы сделать ему противоположное инвертируем биты:
-	11111010 - и добавить 1 = 11111011. Это и есть -5
-
-	*/
+	// Имеем число 5 - 00000101. Чтобы сделать ему противоположное инвертируем биты:
+	// 11111010 - и добавить 1 = 11111011. Это и есть -5
 
 	short int q = 5;
 	q = q << 1;// сдвиг влево на 1 бит:
-	/*
-	было: 0000000000000101
-	стало:0000000000001010. Просто дописали 0 в конце, а в начале удалили один символ
-	*/
+	// было: 0000000000000101
+	// стало:0000000000001010. Просто дописали 0 в конце, а в начале удалили один символ
 	// сдвиг влево на n похиций - умножение на 2^n, если не происходит потери значащих битов ( единиц )
 
 	short int q2 = 5;
@@ -150,21 +142,21 @@ int main(){
 	a3 = 41;
 	b3 = 236;
 	c3 = a3 & b3;
-	/*
+
 	00101001
 	11101100
 	--------
 	00101000
-	*/
+
 	// остаются только те биты, где совпадают единицы
 
 	c3 = a3|b3;
-	/*
+
 	00101001
 	11101100
 	--------
 	11101101
-	*/
+
 	// остается то, что имеет 1
 
 	unsigned char a4,b4;
@@ -173,12 +165,10 @@ int main(){
 	// ~~a4 - вернет исходное состояние a4
 
 	c3 = a4 ^ b4;
-	/*
 	00101001
 	11101100
 	--------
 	11000101 // остается только ОСТАТОК ОТ ДЕЛЕНИЯ СУММЫ БИТОВ НА 2 - %(1+0=1/2=1, 1+1=2/2=0)
-	*/
 
 	unsigned long style;
 	unsigned long mask = (1L << 28);// заполняем 28 бит единицей
@@ -207,6 +197,53 @@ int main(){
 	Date teachersDayNextYear;
 
 	teachersDayNextYear = addYear(teachersDay);// передастся копия
+
+	///////////////
+
+	int arr[5] = {4};
+	cout << arr[0] << endl;
+
+	cout << "address: " << &x << endl;// print address of x in memory
+
+	short b6;
+	short* p6 = &b6;// переменная-указатель
+	short** pp = &p6;// указатель на указатель
+	cout << pp;
+	*/
+
+	/*
+	int a = 8;
+	int* p = &a;
+	cout << a << endl;
+	cout << *p << endl;// разыменование. *p - обращение к переменной ПО АДРЕСУ p, а не значение самого адреса
+	cout << *&a << endl;
+
+	int * const p1 = &a;
+
+	int aa[5] = {0,1,2,3,4};
+	int *pp;
+	pp = &aa[0];
+	cout << aa[0] << endl;
+	cout << *pp << endl;
+	pp += 4;
+	cout << *pp << endl;
+
+	for(pp = &aa[0];pp <= &aa[4]; ++pp)
+	{
+		cout << *pp << endl;
+	}
+	// pp[i] - то же самое, что и aa[i]
+	*/
+
+	int a[1000];
+	for(int i=0;i<1000;i++)
+		a[i] = 0;
+
+	memset( a,0,sizeof(a) );// заполнить массив a нулями(что, чем, сколько)
+	int a2[1000];
+	memcpy(a2,a,sizeof(a));// копировать массив (куда, что, сколько)
+
+	// const Date* d - указатель на константу. Нельзя менять поля
 
 
 }

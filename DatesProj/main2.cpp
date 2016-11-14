@@ -10,6 +10,8 @@ inline void keep_window_open ()
 	char ch ; cin>>ch ;
 }
 
+int square (int);
+
 int main()
 {
 	/*cout << "Hello, World!\n"
@@ -66,6 +68,8 @@ int main()
 
 	// не начинать свои имена с '_'
 	*/
+
+	/*
 	double x {2.7};
 	int y {x};
 	char b1 {1000};
@@ -86,7 +90,63 @@ int main()
 	cout << "minus is " << val1-val2 << '\n';
 
 	//constexpr int max = 17;// константное выражение
+	*/
+
+	/*
+	int i = 0;
+	while(i<200){
+		cout << (char)('a'+i) << endl;
+		i++;
+	}
+
+	cout << "square of 40 = " << square(40)<< endl;
+
+	//vector<int> v = {5, 6, 4, 21, 67, 42};
+
+	vector<int> vi(6);// vector with 6 elements of 0;
+	vector<string> cs(10);// vector with 10 elements of ""
+	vi.push_back(10);// add element to the end
+	vi.pop_back();
+
+	cout << vi.size() << endl;
+
+
+	string disliked = "help";
+
+	for(string tmp; cin >> tmp; )
+	{
+		if(tmp != disliked){
+			cout << tmp << endl;
+		}else{
+			cout << "BEEP" << endl;
+		}
+	}
+	*/
+
+	//Int a = 2;
+
+	/*try{
+		return 0;
+	}
+	catch(exception& e){
+		cerr << "runtime_error: " << e.what() << '\n';
+		return 1;
+	}
+	catch(...) {// ловить все исключения
+
+	}*/
+	cout << "OK1";
+
+	//int a2 = 100/0;
+	//cout << a2 << "OK";
+	cout << "OK2";
+	//int x1 = narrow_cast<int>(2.9);
 
 
 	return 0;
+}
+
+int square (int x)
+{
+	return x*x;
 }

@@ -5,7 +5,7 @@
 using std::cout;
 using std::cin;
 using std::endl;
-
+/*
 int main()
 {
 	srand(static_cast<unsigned int>(time(0)));
@@ -41,4 +41,4 @@ int main()
 
 	return 0;
 
-}
+}*/

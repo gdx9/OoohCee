@@ -4,13 +4,28 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../guess_number_game.cpp 
+../guess_number_game.cpp \
+../hangman.cpp \
+../hs.cpp \
+../show_board.cpp \
+../string_tester.cpp \
+../words.cpp 
 
 OBJS += \
-./guess_number_game.o 
+./guess_number_game.o \
+./hangman.o \
+./hs.o \
+./show_board.o \
+./string_tester.o \
+./words.o 
 
 CPP_DEPS += \
-./guess_number_game.d 
+./guess_number_game.d \
+./hangman.d \
+./hs.d \
+./show_board.d \
+./string_tester.d \
+./words.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

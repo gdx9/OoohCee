@@ -3,8 +3,12 @@
 #include <cstdlib>
 #include <ctime>
 
-using namespace std;
+using std::string;
+using std::cout;
+using std::endl;
+using std::cin;
 
+/*
 int main()
 {
 
@@ -67,4 +71,4 @@ int main()
 
 	return 0;
 
-}
+}*/

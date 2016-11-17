@@ -6,7 +6,7 @@
 #include <cctype>
 
 using namespace std;
-
+/*
 int main()
 {
 	const int MAX_WRONG = 8;  // max of incorrect symbols
@@ -47,7 +47,7 @@ int main()
 		{
 			cout << "Yes! you got it!" << endl;
 
-			for(int i=0;i<THE_WORD.length(); i++)
+			for(unsigned int i=0;i<THE_WORD.length(); i++)
 			{
 				if(THE_WORD[i] == guess)
 				{
@@ -75,4 +75,4 @@ int main()
 
 	return 0;
 
-}
+}*/

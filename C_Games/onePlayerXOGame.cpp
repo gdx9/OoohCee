@@ -15,7 +15,7 @@ void showBoard(const vector<char>&);
 char checkWin( const vector<char>&, char&);
 inline bool isDigit(char);
 void makeMove(vector<char>&, char);
-
+/*
 int main()
 {
 	cout << "Choose a cell\n"
@@ -32,7 +32,7 @@ int main()
 
 	return 0;
 
-}
+}*/
 
 bool haveEmptyCells(const vector<char>& board)
 {

@@ -1,0 +1,1 @@
+staticClass.o: ../staticClass.cpp

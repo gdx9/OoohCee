@@ -1,0 +1,1 @@
+abstractClass.o: ../abstractClass.cpp

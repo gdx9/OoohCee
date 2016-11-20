@@ -1,0 +1,1 @@
+simpleChild.o: ../simpleChild.cpp

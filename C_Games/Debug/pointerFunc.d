@@ -1,0 +1,1 @@
+pointerFunc.o: ../pointerFunc.cpp

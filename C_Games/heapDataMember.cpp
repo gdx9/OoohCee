@@ -7,9 +7,9 @@ class Critter4
 {
 public:
 	Critter4(const string& name = "", int age = 0);
-	~Critter4(); //destructor prototype
-	Critter4(const Critter4& c);//copy constructor prototype
-	Critter4& operator=(const Critter4& c);//overloaded assignment operator
+	~Critter4();//destructor prototype
+	Critter4(const Critter4& c);
+	Critter4& operator=(const Critter4& c);
 	void greet() const;
 
 private:
@@ -38,7 +38,6 @@ Critter4::Critter4(const Critter4& c)//copy constructor definition
 }
 
 Critter4& Critter4::operator=(const Critter4& c)
-//overloaded assignment op def
 {
 	cout << "Overloaded Assignment Operator called" << endl;
 	if (this != &c)
@@ -61,7 +60,7 @@ void Critter4::greet() const
 void testDestructor();
 void testCopyConstructor(Critter4 aCopy);
 void testAssignmentOp();
-
+/*
 int main()
 {
 	testDestructor();
@@ -80,7 +79,7 @@ int main()
 	//delete crit777;
 	cout << "\n-----@@@@\n";
 	return 0;
-}
+}*/
 
 void testDestructor()
 {

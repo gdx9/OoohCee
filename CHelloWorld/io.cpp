@@ -37,7 +37,7 @@ Date addYear(Date d)
 	return d;
 }
 
-
+/*
 int main(){
 /*
 	// cout << setfill('_');// fill ALL empty symbols as '_'(not space, just empty, like with setw())
@@ -234,7 +234,7 @@ int main(){
 	}
 	// pp[i] - то же самое, что и aa[i]
 	*/
-
+/*
 	int a[1000];
 	for(int i=0;i<1000;i++)
 		a[i] = 0;
@@ -244,9 +244,9 @@ int main(){
 	memcpy(a2,a,sizeof(a));// копировать массив (куда, что, сколько)
 
 	// const Date* d - указатель на константу. Нельзя менять поля
-
-
-}
+*/
+/*
+}*/
 
 void printAsBinary(unsigned int x){
 

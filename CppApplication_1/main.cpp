@@ -95,7 +95,26 @@ istream& operator >> (istream& is, Date& date)
     return is;
 }
 
-//////////
+int intCmp(const void * pa, const void *pb)
+{
+    const int* a = reinterpret_cast<const int*>(pa);
+    const int* b = reinterpret_cast<const int*>(pb);
+    
+    return *a - *b;
+}
+
+int intCmpReverse(const void * pa, const void *pb)
+{
+    const int* a = reinterpret_cast<const int*>(pa);
+    const int* b = reinterpret_cast<const int*>(pb);
+    
+    return -(*a - *b);
+}
+
+
+
+/////////
+/*
 int main()
 {
 
@@ -142,9 +161,16 @@ int main()
     cout << date2.dd << endl;
     
     cout << date2 << endl;
+    cout << "----------------" << endl;
     
+    int d[10] = {2,-3,3,4,8,9,3,1,7,6};
+    qsort( d, 10, sizeof(int), intCmp );
+    for(int i=0; i<10;i++)
+    {
+        cout << d[i] << ' ';
+    }
     
     return 0;
     
 }
-
+*/

@@ -69,7 +69,7 @@ void printStudentInfo(PS_Student& st)
     cout << endl;
 }
 
-
+/*
 int main()
 {
     PS_Student ada;
@@ -79,5 +79,7 @@ int main()
     
     printStudentInfo(ada);
     
+    cout << "AAAAAAAAAAAAAAAAAAAAAAA";
+    
     return 0;
-}
+}*/

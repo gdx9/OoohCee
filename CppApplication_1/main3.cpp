@@ -93,7 +93,7 @@ void showStrArr(string* langs, int langCnt)
     
     cout << langLine;
 }
-
+/*
 int main()
 {
     Student anna("Anna", 17, 12.1, FEMALE);
@@ -109,5 +109,5 @@ int main()
     showStrArr(annaLangs,langCnt);
     
     return 0;
-}
+}*/
 

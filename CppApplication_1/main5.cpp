@@ -2,7 +2,7 @@
 #include <iostream>
 
 using namespace std;
-
+/*
 int main()
 {
 //    Product prod(1, "ASUS", "ASUS Model-1");
@@ -38,3 +38,4 @@ int main()
     
     
 }
+*/

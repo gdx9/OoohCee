@@ -35,8 +35,14 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/Stack.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/main2.o
+	${OBJECTDIR}/main2.o \
+	${OBJECTDIR}/main3.o \
+	${OBJECTDIR}/main4.o \
+	${OBJECTDIR}/main5.o \
+	${OBJECTDIR}/remember.o \
+	${OBJECTDIR}/templateFuncs.o
 
 
 # C Compiler Flags
@@ -63,6 +69,11 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cppapplication_1: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cppapplication_1 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/Stack.o: Stack.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Stack.o Stack.cpp
+
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -72,6 +83,31 @@ ${OBJECTDIR}/main2.o: main2.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main2.o main2.cpp
+
+${OBJECTDIR}/main3.o: main3.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main3.o main3.cpp
+
+${OBJECTDIR}/main4.o: main4.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main4.o main4.cpp
+
+${OBJECTDIR}/main5.o: main5.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main5.o main5.cpp
+
+${OBJECTDIR}/remember.o: remember.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/remember.o remember.cpp
+
+${OBJECTDIR}/templateFuncs.o: templateFuncs.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/templateFuncs.o templateFuncs.cpp
 
 # Subprojects
 .build-subprojects:

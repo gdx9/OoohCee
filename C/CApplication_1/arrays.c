@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/*
 main()
 {
     int c, i, nwhite, nother;
@@ -32,4 +32,4 @@ main()
     printf(", white space = %d, other = %d\n", nwhite, nother);
     
 }
-
+*/

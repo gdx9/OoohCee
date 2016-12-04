@@ -8,6 +8,37 @@ using std::cin;
 using std::endl;
 using std::ios_base;
 
+void coutBool();
+void showGMKBytes();
+void showTypesValues();
+void calculateBMI();
+void seedsOnTheBoard();
+void arrayFunc();
+void simpleNumbers();
+
+int main()
+{
+//    setlocale(LC_ALL, "Russian");// change locale to russian
+//    coutBool();
+//    showGMKBytes();
+//    showTypesValues();
+//    calculateBMI();
+//    seedsOnTheBoard();
+//    arrayFunc();
+    
+    simpleNumbers();
+    
+    return 0;
+}
+
+void coutBool()
+{
+    int a = 1;
+    int b = 2;
+    cout << (a>b) << endl;// 0
+    cout << (a<b) << endl;// 1
+    cout << (a==b) << endl;// 0
+}
 
 void showGMKBytes()
 {
@@ -99,24 +130,64 @@ void seedsOnTheBoard()
     }
 }
 
-int main()
+void arrayFunc()
 {
-//    setlocale(LC_ALL, "Russian");// change locale to russian
-//    showGMKBytes();
-//    showTypesValues();
-//    calculateBMI();
-//    seedsOnTheBoard();
+    int a[10];
     
-    int a = 1;
-    int b = 2;
+    for(int i=0; i<10; i++)
+    {
+        cout << "Input " << i << " element number: ";
+        if(!(cin >> a[i]))
+        {
+            cin.clear();
+            while(cin.get() != '\n')
+                cout << "Input " << i << " element number!";
+        }
+    }
+    system("clear");
     
-    cout << (a>b) << endl;
-    cout << (a<b) << endl;
-    cout << (a==b) << endl;
+    // source array
+    for(int i=0;i<10;i++)
+    {
+        cout << "a[" << i <<"] = " << a[i] << endl;
+    }
     
-    
-    
-        
-    return 0;
+    int max = a[0], min = a[0];
+    for(int i=1;i<10;i++)
+    {
+        if(max < a[i])
+            max = a[i];
+        if(min > a[i])
+            min = a[i];
+    }
+    cout << "max: " << max << ", min: " << min << endl;
 }
 
+void simpleNumbers()
+{
+    const int N = 1500;
+    
+    bool simpleNumbers[N+1];
+    
+    for(int i=2;i<N+1;i++)
+    {
+        simpleNumbers[i] = true;
+    }
+    
+    for(int i=2; i<=N; i++)
+    {
+        if(simpleNumbers[i])
+        {
+            for(int j=i*i; j<=N; j+=i)
+            {
+                simpleNumbers[j] = false;
+            }
+        }
+    }
+    
+    for(int i=2; i<=N+1; i++)
+    {
+        if(simpleNumbers[i])
+            cout << i << endl;
+    }
+}

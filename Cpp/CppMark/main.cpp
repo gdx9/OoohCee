@@ -82,14 +82,41 @@ void calculateBMI()
     cout << "Your BMI: " << BMI << endl;
 }
 
+void seedsOnTheBoard()
+{
+    const int N = 64;
+    unsigned long long result = 1, pow = 1;
+    
+    for(int i=1; i<N; i++)
+    {
+        for(int j(0); j<i; j++)
+        {
+            pow *= 2;
+        }
+        cout << "on the first " << i << " cells we have " << result << " seeds\n";
+        result += pow;
+        pow = 1;
+    }
+}
+
 int main()
 {
 //    setlocale(LC_ALL, "Russian");// change locale to russian
 //    showGMKBytes();
 //    showTypesValues();
 //    calculateBMI();
+//    seedsOnTheBoard();
+    
+    int a = 1;
+    int b = 2;
+    
+    cout << (a>b) << endl;
+    cout << (a<b) << endl;
+    cout << (a==b) << endl;
     
     
+    
+        
     return 0;
 }
 

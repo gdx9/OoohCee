@@ -2,11 +2,15 @@
 #include <iostream>
 #include <locale.h>
 #include <climits>
+#include <time.h>
+#include <random>
 
 using std::cout;
 using std::cin;
 using std::endl;
 using std::ios_base;
+
+enum color{RED=1, GREEN, BLUE};
 
 void coutBool();
 void showGMKBytes();
@@ -15,6 +19,11 @@ void calculateBMI();
 void seedsOnTheBoard();
 void arrayFunc();
 void simpleNumbers();
+void moveChar();
+void showPointers();
+void dynamicArray();
+void showRand();
+void showEnum();
 
 int main()
 {
@@ -25,8 +34,12 @@ int main()
 //    calculateBMI();
 //    seedsOnTheBoard();
 //    arrayFunc();
-    
-    simpleNumbers();
+//    simpleNumbers();
+//    moveChar();
+//    showPointers();
+//    dynamicArray();
+//    void showRand();
+    showEnum();
     
     return 0;
 }
@@ -191,3 +204,141 @@ void simpleNumbers()
             cout << i << endl;
     }
 }
+
+void moveChar()
+{
+    char str[100] = "";
+    char c = '|', c1;
+    int index = 0;
+    
+    do
+    {
+        cin >> c1;
+        system("clear");
+        if(c1 == 'D' || c1 == 'd')
+        {
+            for(int i(0); i<=index; i++)
+                if(i != index)
+                    str[i] = ' ';
+                else
+                    str[i] = c;
+            str[index+1] = '\0';
+            index++;
+        }
+        
+        for(int i(0); i < index; i++)
+        {
+            cout << endl;
+        }
+        cout << str;
+    
+    }while(c1 != 'q');
+}
+
+void showPointers()
+{
+    int a{0};
+    double b{0};
+    cout << "a = " << a << ", &a = " << &a << endl;
+    cout << "b = " << b << ", &b = " << &b << endl;
+    
+    double c[16];
+    for(int i{0}; i<16; i++)
+    {
+        cout << "c[" << i << "] = " << &(c[i]) << endl;
+    }
+    
+    double p = 12.5;
+    double *pp = &p;
+    cout << "pointer to double = " << sizeof(pp) << endl;
+    cout << "*pp = " << *pp << endl;
+    
+    int t = 12;;// 4 bytes
+    int *tp = &t;// 8 bytes
+    cout << "pointer to int = " << sizeof(tp) << endl;
+    cout << "*tp = " << *tp << endl;
+}
+
+void dynamicArray()
+{
+    int N;
+    cout << "Type size of the array: " << endl;
+    cin >> N;
+    
+    int *p = new int[N];// dynamic array
+    
+    for(int i{0}; i<N; i++)
+    {
+        *(p+i) = i+1;// ====== p[i] = i+1;
+        cout << "p[" << i << "] = " << p[i] << endl;
+    }
+    
+    delete [] p;
+    
+    //////////
+    
+    int K, M;
+    cout << "Enter K,M: ";
+    cin >> K >> M;
+    
+    int **pp = new int*[K];
+    for(int i{0}; i<K; i++)
+        pp[i] = new int[K];
+        
+    for(int i{0}; i<N; i++)
+    {
+        for(int j{0}; j<M; j++)
+        {
+            pp[i][j] = 0;// *(*(pp+i)+j) = 0
+            cout << pp[i][j] << ' ';
+        }
+        cout << endl;
+    }
+        
+    for(int i{0}; i<K; i++)
+        delete [] pp[i];// first - delete *.
+    delete [] pp;// then delete **.
+}
+
+void showRand()
+{
+    int a;
+    
+    srand(time(NULL));// чтобы при каждом запуске были РАЗНЫЕ случайные числа
+    
+    for(int i=0; i<10; i++)
+    {
+//        a = rand();// при каждом запуске случайные числа, НО ВСЕГДА ОДИНАКОВЫЕ
+//        a = rand()%10 + 1;// от 1 до 10
+        a = rand()%100 + 1;// от 1 до 100
+        cout << a << endl;
+    }
+}
+
+void showEnum()
+{
+    unsigned int a;
+    
+    do{
+        cin >> a;
+    }while(a == 0 || a > 3);
+    
+    color c = (color) a;// явно преобразовываем. Потому что типы разные
+    
+    switch(c)
+    {
+        case RED:
+            //system("color 4");
+            cout << "Hello" << endl;
+            break;
+        case GREEN:
+            //system("color 2");
+            cout << "Hello" << endl;
+            break;
+        case BLUE:
+            //system("color 3");
+            cout << "Hello" << endl;
+            break;
+    }
+}
+

@@ -27,6 +27,7 @@ struct Polar
 void showPolar(const Polar &p);
 Polar convertToPolar(const XY &xy);
 
+/*
 int main()
 {
 //    Employee john{"John", 2032.0, 3};
@@ -59,6 +60,7 @@ int main()
     
     return 0;
 }
+*/
 
 void inputEmp(Employee *e)
 {

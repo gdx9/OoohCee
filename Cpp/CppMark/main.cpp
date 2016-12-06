@@ -24,7 +24,12 @@ void showPointers();
 void dynamicArray();
 void showRand();
 void showEnum();
-
+double ABS(double n);
+bool inputWithPointer(int *a);
+int swapBetter(int &a, int &b);
+int ourSum(const int p[], int length);
+void ourGetString(char *str);
+/*
 int main()
 {
 //    setlocale(LC_ALL, "Russian");// change locale to russian
@@ -39,10 +44,28 @@ int main()
 //    showPointers();
 //    dynamicArray();
 //    void showRand();
-    showEnum();
+//    showEnum();
+//    cout << ABS(-3) << endl;
+    
+/////////////////////////
+//    int b = 0;
+////    if( inputWithPointer(&b) ) cout << b << endl;
+//    int &ss = b;// превязана к параметру и переуказать ее нельзя
+//    ss = 12;
+//    cout << ss << endl;
+//    int a = 10;
+//    swapBetter(a,b);
+//    cout << "a = " << a << ", b = " << b << endl;
+//    int arr[] = {1,2,3,4,5,6,7,8,9,10};
+//    cout << ourSum(arr, 10);
+/////////////////////////    
+//    char str[20];
+//    ourGetString(str);
+//    cout << str;
+    
     
     return 0;
-}
+}*/
 
 void coutBool()
 {
@@ -340,5 +363,55 @@ void showEnum()
             cout << "Hello" << endl;
             break;
     }
+}
+
+double ABS(double n)
+{
+    return n>0.0 ? n : -n;
+}
+
+bool inputWithPointer(int *a)
+{
+    if(cin >> (*a))
+        return true;
+    else
+        return false;
+}
+
+int swapBetter(int &a, int &b)
+{
+    int tmp = a;
+    a = b;
+    b = tmp;
+}
+
+//int ourSum(const int p[][1])// для двухмерных нужно передавать кол-во подмассивов
+//int ourSum(int *p)// не понятно на что указатель(а он на массив)
+int ourSum(const int p[], int length)// лучше(для указателей НА МАССИВЫ)
+{
+    int sum = 0;
+    
+    for(int i{0}; i<length; i++)
+    {
+        sum += p[i];
+    }
+    
+    return sum;
+}
+
+void ourGetString(char *str)
+{
+    int i{0};
+    char c;
+    cin.get(c);
+    
+    while(c != '\n')
+    {
+        str[i] = c;
+        i++;
+        cin.get(c);
+    }
+    
+    str[i] = '\0';
 }
 

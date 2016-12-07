@@ -29,7 +29,7 @@ void ourQuickSort(T arr, int l, int r)
     if(i < r) ourQuickSort(arr,i,r);
     if(j > l) ourQuickSort(arr,l,j);
 }
-
+/*
 int main()
 {
     srand(time(NULL));
@@ -58,6 +58,4 @@ int main()
     
     return 0;
 }
-
-
-
+*/

@@ -32,7 +32,7 @@ void ourGetString(char *str);
 /*
 int main()
 {
-//    setlocale(LC_ALL, "Russian");// change locale to russian
+//    setlocale(LC_ALL, "Russian");// change locale to russian - <clocale>
 //    coutBool();
 //    showGMKBytes();
 //    showTypesValues();

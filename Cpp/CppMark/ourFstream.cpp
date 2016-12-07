@@ -3,7 +3,7 @@
 #include <cstring>
 
 using namespace std;
-
+/*
 int main()
 {
     ofstream fout;
@@ -35,4 +35,4 @@ int main()
     
     return 0;
 }
-
+*/

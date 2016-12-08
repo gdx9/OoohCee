@@ -7,7 +7,7 @@ using namespace std;
 using Prog::Account;
 using Prog::Stack1;
 using Prog::Stack2;
-
+/*
 int main(int argc, char** argv)
 {
     
@@ -49,4 +49,4 @@ int main(int argc, char** argv)
     
     return 0;
 }
-
+*/

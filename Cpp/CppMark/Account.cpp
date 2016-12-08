@@ -21,7 +21,7 @@ namespace Prog
         return id;
     }
     
-    void Account::setId(char* id)
+    void Account::setId(char *id)
     {
         this->id = id;
     }

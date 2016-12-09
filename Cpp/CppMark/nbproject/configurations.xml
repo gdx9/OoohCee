@@ -4,6 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Account.h</itemPath>
+      <itemPath>multiFiles.h</itemPath>
+      <itemPath>outTime.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,9 +15,23 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Account.cpp</itemPath>
       <itemPath>XOGame.cpp</itemPath>
+      <itemPath>lists.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
+      <itemPath>miltiFilesMain.cpp</itemPath>
+      <itemPath>multiFiles.cpp</itemPath>
+      <itemPath>oopMain.cpp</itemPath>
+      <itemPath>ourAbstract.cpp</itemPath>
+      <itemPath>ourExc.cpp</itemPath>
+      <itemPath>ourFstream.cpp</itemPath>
+      <itemPath>ourRTTI.cpp</itemPath>
+      <itemPath>ourRecursion.cpp</itemPath>
+      <itemPath>ourSTL.cpp</itemPath>
       <itemPath>ourStructs.cpp</itemPath>
+      <itemPath>ourTemplate.cpp</itemPath>
+      <itemPath>outInheritance.cpp</itemPath>
+      <itemPath>outTime.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -41,11 +58,45 @@
           <standard>11</standard>
         </ccTool>
       </compileType>
+      <item path="Account.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Account.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="XOGame.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lists.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="miltiFilesMain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="multiFiles.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="multiFiles.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="oopMain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ourAbstract.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ourExc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ourFstream.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ourRTTI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ourRecursion.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ourSTL.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="ourStructs.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ourTemplate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="outInheritance.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="outTime.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="outTime.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -69,11 +120,45 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Account.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Account.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="XOGame.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="lists.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="miltiFilesMain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="multiFiles.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="multiFiles.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="oopMain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ourAbstract.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ourExc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ourFstream.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ourRTTI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ourRecursion.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ourSTL.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="ourStructs.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ourTemplate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="outInheritance.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="outTime.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="outTime.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

@@ -48,7 +48,7 @@ int main(int argc, char** argv) {
     for(int i=0; i<1000000; i++){
         
         char *name = (char *) malloc(sizeof(char)*1000);
-        //name = "John";
+        
         if(name != NULL)
         {
             name[0] = 'J';
@@ -70,4 +70,5 @@ int main(int argc, char** argv) {
     
     return (EXIT_SUCCESS);
 }
+
 

@@ -19,7 +19,7 @@ int pwr(register int m)
     
     return m;
 }
-
+/*
 int main(int argc, char** argv) {
     
 //    register int n = 10000000;
@@ -70,5 +70,4 @@ int main(int argc, char** argv) {
     
     return (EXIT_SUCCESS);
 }
-
-
+*/

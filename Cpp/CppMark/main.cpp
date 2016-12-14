@@ -386,7 +386,7 @@ int swapBetter(int &a, int &b)
 }
 
 //int ourSum(const int p[][1])// для двухмерных нужно передавать кол-во подмассивов
-//int ourSum(int *p)// не понятно на что указатель(а он на массив)
+//int ourSum(int *p)// не понятно на что указатель(а он - на массив)
 int ourSum(const int p[], int length)// лучше(для указателей НА МАССИВЫ)
 {
     int sum = 0;

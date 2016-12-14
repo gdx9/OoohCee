@@ -23,7 +23,7 @@ public:
     }
 };
 
-class C : public B// все, что было у родителя в public - будет здесь в !!private!!
+class C : public B// все, что было у родителя в public - будет здесь в !!public!!
 {
 public:
     void showC(){

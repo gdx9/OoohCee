@@ -15,7 +15,7 @@ int main()
 {
 
 	std::ifstream wordsFile;
-	const char* filePath = "/home/gdx/Downloads/1.txt";// ???
+	const char* filePath = "/home/gdx/Documents/debian.txt";// ???
 	wordsFile.open(filePath);
 
 	if( !wordsFile.is_open() )

@@ -3,6 +3,10 @@
 
 #include <vector>
 #include <iostream>
+#include <fstream>
+#include <vector>
+#include <ctime>
+#include <cstdlib>
 
 namespace word_manip
 {
@@ -12,7 +16,7 @@ namespace word_manip
 		std::string *eng;
 		std::string *trans;
 	public:
-		Word(std::string *eng_, std::string *trans_);
+		Word(std::string *, std::string *);
 		~Word();
 
 		std::string * getEng() const;
@@ -20,6 +24,11 @@ namespace word_manip
 	};
 
 	bool checkSym(const char symb);
+
+	void readWordsFile(std::vector<Word *> *);
+	void showWords(const std::vector<Word *> *);
+	void clearWordsVec(std::vector<Word *> *);
+	void showRandom(const std::vector<Word *> *);
 
 }
 

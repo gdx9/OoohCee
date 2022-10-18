@@ -1,1 +1,0 @@
-friendCritter.o: ../friendCritter.cpp

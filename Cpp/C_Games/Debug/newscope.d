@@ -1,1 +1,0 @@
-newscope.o: ../newscope.cpp

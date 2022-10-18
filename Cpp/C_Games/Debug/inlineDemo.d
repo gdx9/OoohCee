@@ -1,1 +1,0 @@
-inlineDemo.o: ../inlineDemo.cpp

@@ -1,1 +1,0 @@
-onePlayerXOGame.o: ../onePlayerXOGame.cpp

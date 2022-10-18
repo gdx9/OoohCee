@@ -1,1 +1,0 @@
-words.o: ../words.cpp

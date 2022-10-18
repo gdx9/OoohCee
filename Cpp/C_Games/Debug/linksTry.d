@@ -1,1 +1,0 @@
-linksTry.o: ../linksTry.cpp

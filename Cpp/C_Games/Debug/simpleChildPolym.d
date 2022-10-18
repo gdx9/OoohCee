@@ -1,1 +1,0 @@
-simpleChildPolym.o: ../simpleChildPolym.cpp
